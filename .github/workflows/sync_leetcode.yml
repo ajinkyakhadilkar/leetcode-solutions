@@ -2,8 +2,8 @@ name: Sync Leetcode
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 22 * * TUE,THU,SUN"
+  #schedule:
+  #  - cron: "0 22 * * TUE,THU,SUN"
 
 jobs:
   build:
@@ -16,3 +16,4 @@ jobs:
           github-token: ${{ github.token }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          destination-folder: problems
